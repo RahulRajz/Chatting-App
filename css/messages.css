@@ -1,0 +1,218 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #161625;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(../image/chat-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Container Start  */
+#container {
+    height: 650px;
+    width: 480px;
+    position: relative;
+    padding: 30px;
+    border-radius: 0px  50px;
+    background: #b9efef;
+}
+
+/* Header Start Here */
+#header {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    border-radius:0px  50px;
+    background: #a2ffff;
+}
+
+#header a {
+    height: 100px;
+    width: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: #8b3dff;
+    font-size: 20px;
+}
+
+/* For Profile Image*/
+#header #profileImage {
+    height: 80px;
+    width: 80px;
+    border: 2px solid #00fa9a;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 70px;
+}
+
+#header #profileImage img {
+    width: 100%;
+}
+
+/* For Details */
+#header #userDetail {
+    position: absolute;
+    left: 160px;
+}
+
+/* For Name */
+#header #userDetail #name {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0 0 5px 0;
+    color: #8b3dff;
+}
+
+/* Main Section Start Here  */
+#mainSection {
+    height: 450px;
+    width: 100%;
+    position: absolute;
+    top: 130px;
+    left: 0;
+    overflow-y: auto;
+    padding: 30px;
+}
+
+/* For Display Error Message  */ 
+#mainSection #errors{
+    font-size: 19px;
+    padding: 10px 35px;
+}
+
+/* For Message Request Design  */
+#mainSection .request {
+    min-height: 80px;
+    max-width: 75%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+#mainSection .request .name,
+#mainSection .response .name {
+    font-size: 20px;
+    color: #bd006d;
+}
+
+#mainSection .request .name {
+    color: #5d006d;
+}
+
+#mainSection .request .messages {
+    font-size: 17px;
+}
+
+#mainSection .responseCard {
+    min-height: 80px;
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* For Message Response Design  */
+#mainSection .responseCard .response {
+    min-width: 80px;
+    max-width: 75%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Messages input field */
+#messagingTypingSection {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+#messagingTypingSection #typingField {
+    height: 50px;
+    width: 330px;
+    border: none;
+    outline: none;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 8px 0;
+    padding: 0 20px;
+    font-size: 18px;
+    box-shadow: 1px 1px 6px #00000013, -1px -1px 6px #e6336f13;
+    border-radius: 7px;
+    position: absolute;
+    left: 30px;
+}
+
+/* For Send Message Button  */
+#messagingTypingSection #sendMessage {
+    height: 50px;
+    width: 90px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #5d006d;
+    margin: 0px 15px;
+    padding: 0px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    position: absolute;
+    right: 25px;
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+#messagingTypingSection #sendMessage:hover{
+    background-color: #9d0eb6;
+}
+
+/* For Customizing scroll bar */
+#mainSection::-webkit-scrollbar {
+    background: transparent;
+}
+
+#mainSection::-webkit-scrollbar-track {
+    width: 40px;
+}
+
+#mainSection::-webkit-scrollbar-thumb {
+    height: 40px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+}
+#messagingTypingSection .setId
+{
+    display: none;
+}

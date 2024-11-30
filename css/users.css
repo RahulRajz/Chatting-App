@@ -1,0 +1,262 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #161625;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(../image/chat-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Container Here  */
+#container {
+    height: 650px;
+    width: 480px;
+    position: relative;
+    padding: 30px;
+    border-radius: 0px  50px;
+    background: #b9efef;
+}
+
+/* Header Section */
+#container #header {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    border-radius:0px  50px;
+    background: #a2ffff;
+}
+
+/* For Profile Image */
+#header #headerProfile {
+    height: 90px;
+    width: 90px;
+    border: 2px solid #00fa9a;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 30px;
+}
+
+#header #headerProfile img {
+    width: 100%;
+}
+
+/* For Details  */
+#header #details {
+    position: absolute;
+    left: 140px;
+}
+
+/* User Name */
+#header #details #headerName {
+    margin: 0 0 8px 0;
+    color: #8b3dff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* For User Status (Online or Offline) */
+#header #details #headerStatus {
+    font-weight: 300;
+}
+
+/* Logout Button */
+#header #logout {
+    height: 50px;
+    width: 90px;
+    font-size: 17px;
+    color: #fff;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    background: #fa2068;
+}
+
+#header #logout a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#header #logout:hover {
+    background: #f10353;
+}
+
+/* For Search Box */
+#searchBox {
+    height: 50px;
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    top: 130px;
+}
+
+#searchBox input[type="text"] {
+    height: 100%;
+    width: 84%;
+    padding: 0 20px;
+    border: none;
+    border-radius: 50px;
+    color: #000;
+    font-size: 18px;
+}
+
+#searchBox input[type="text"]:focus{
+    outline-color: #00fa9a;
+}
+
+
+/* Search Button */
+#searchBox .searchButton {
+    height: 50px;
+    width: 60px;
+    background: #db1f5e;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50px;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.searchButton:hover{
+    background: #f90355;
+}
+
+/* Online users list  */
+#onlineUsers {
+    height: 420px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 215px;
+    overflow-y: auto;
+}
+
+/* For Display Error Message  */
+#onlineUsers #errors{
+    font-size: 19px;
+    padding: 10px 35px;
+}
+
+/* User Profile  */
+#onlineUsers .profile {
+    height: 90px;
+    width: 90%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 5%;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px #00000030;
+    cursor: pointer;
+}
+
+/* To display Multiple Users */
+#onlineUsers .profile:first-child {
+    top: 0px;
+}
+
+/* users profile image */
+#onlineUsers .profile .image {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #00fa9a;
+    position: absolute;
+    left: 25px;
+}
+
+#onlineUsers .profile .image img {
+    width: 100%;
+}
+
+/* Name & Last Message */
+#onlineUsers .profile .name,
+.lastMessage {
+    height: 40px;
+    width: 60%;
+    position: absolute;
+    left: 110px;
+    line-height: 40px;
+    overflow: hidden;
+}
+
+/* Name */
+#onlineUsers .profile .name {
+    color: #8b3dff;
+    top: 10px;
+    font-size: 19px;
+}
+
+/* Last Message */
+#onlineUsers .profile .lastMessage {
+    bottom: 10px;
+    color: #000;
+}
+
+/* Status */
+#onlineUsers .profile .status {
+    height: 15px;
+    width: 15px;
+    border-radius: 10px;
+    position: absolute;
+    right: 40px;
+}
+
+/* Online User Status  */
+#onlineUsers .profile .online {
+    background: linear-gradient(to top, #1d6d1d, rgba(255, 255, 255, 0.4));
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Offline User Status  */
+#onlineUsers .profile .offline {
+    background: linear-gradient(to top, #7c1b1f, rgba(255, 255, 255, 0.4));
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Customizing Scroll Bar */
+#onlineUsers::-webkit-scrollbar {
+    background: transparent;
+}
+
+#onlineUsers::-webkit-scrollbar-track {
+    width: 40px;
+}
+
+#onlineUsers::-webkit-scrollbar-thumb {
+    height: 40px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+}

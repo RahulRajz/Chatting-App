@@ -1,0 +1,664 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #edf2fc;
+    --secondary-color: #070707;
+    --logo-color: #8b3dff;
+    --cards-color: #fff3f3;
+    --card-h3-color: #37517e;
+    --team-color:#fff;
+}
+
+.dark-theme {
+    --primary-color: #1c1c1e;
+    /* --secondary-color: #fff; */
+    --secondary-color: #5cb9e4;
+    --logo-color: #9e77f3;
+    --cards-color: #3b3a3b;
+    --card-h3-color: #00ffea;
+    --team-color:#475353;
+    /* --team-color:#c9aeae; */
+
+
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+/* Customizing Scroll Bar   */
+body::-webkit-scrollbar {
+    background: transparent;
+}
+body::-webkit-scrollbar-track {
+    width: 40px;
+}
+
+body::-webkit-scrollbar-thumb {
+    height: 40px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+}
+
+/* **************************************************************** */
+    /* For Header Section  */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-transform: uppercase;
+    padding: 20px;
+    color: var(--logo-color);
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    text-transform: uppercase;
+    padding: 20px 30px;
+}
+
+nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: 0.4s;
+    padding: 5px 15px;
+    border-radius: 60px;
+    font-size: 16px;
+}
+
+nav ul li a:hover { 
+    color: blueviolet;
+}
+
+nav ul li a.active {
+    font-size: 17px;
+}
+.active img{
+    color: var(--logo-color);
+}
+
+    /* For Moon/Sun Icon  */
+.icon{
+    color: black;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: var(--primary-color);
+}
+
+.icon:hover {
+    background-color: var(--primary-color); 
+}
+
+    /*For  Hamburger Menu */
+span{
+    font-size: 25px;
+    margin: 0px 20px;
+    display: none;
+    cursor: pointer;
+    color: var(--logo-color);
+}
+
+/* ************************************************************************** */
+    /* For Horizontal Line  */
+.nav-hr{
+    border-bottom-width: 3px;
+    border-bottom-color: var(--logo-color);
+    margin: 0px 20px;
+    border-radius: 15px;
+}
+
+/* ************************************************************************* */
+/*Section Start Here  */
+
+.cards{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 1px  gray;
+}
+.card1{
+    width: 40%;
+    height: 60vh;
+    color: var(--secondary-color);
+}
+.head{
+    text-align: center;
+    margin-top: 70px;
+}
+.card1 h1, .web-name{
+    display: inline-block;
+    margin-bottom: 4px;
+    font-size: 40px;
+}
+.card1 .head .web-name{
+    color: var(--logo-color);
+}
+.card1 hr{
+    border-bottom-width: 2px;
+}
+.card1 .text .text-1{
+    text-align: center;
+    font-size: 20px;
+    margin: 5px 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.card1 .text .text-2{
+    margin: 8px;
+    font-size: 16px;
+    line-height:20px;
+    padding: 2px 20px;
+    word-spacing: 2px;
+}
+.btn{
+   width: 50%;
+   height: 50px;
+   margin: 30px auto;  
+}
+
+/* Register Button Design Here  */
+.register{
+    padding:  12px 65px;
+    font-size: 20px;
+    background-color: #7b68ee;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.register:hover{
+    background-color: #9285d8;
+}
+
+.card2 .hm-img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    margin-top: 30px;
+
+}
+
+/* ************************************************************************ */
+/* Services Section Start Here */
+.service{
+    margin: 30px 0px; 
+    box-shadow: 0px 0px 1px gray;  
+}
+.service h1{
+    text-align: center;
+    padding: 30px 0px 10px 0px;
+    color: var(--logo-color);
+}
+
+/* Service Card Section Here  */
+.service-cards{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 0px;
+}
+.service-card{
+    width: 250px;
+    border: 2px solid black;
+    background-color: var(--cards-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 30px;
+    word-spacing: 6px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px var(--secondary-color);
+    cursor: pointer;
+    transition: 0.4s all ease;
+  
+}
+.service-card h3{
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--card-h3-color);
+}
+.service-card:hover{
+    background-color: #819494;
+}
+
+/**************************************************************************/
+/* About Us Section Start Here  */
+.about-us{
+    margin: 30px 0px; 
+    box-shadow: 0px 0px 1px gray;
+    
+}
+.about-us h1{
+    text-align: center;
+    padding: 30px 0px 10px 0px;
+    color: var(--logo-color);
+}
+.aboutus-card{
+    margin: 0px 20px;
+}
+.aboutus-card h4{
+    color: var(--card-h3-color);
+   font-size: 20px;
+   margin: 10px 0px;
+}
+.aboutus-card .aboutus-text{
+    font-size: 18px;
+    color: var(--secondary-color);
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
+.about_iconn{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.about_iconn a{
+    text-decoration: none;
+}
+.about_iconn a i{
+    padding: 10px 15px;
+    font-size: 1.4rem;
+    color: var(--logo-color);
+    transition: 0.5s all ease;
+
+}
+.about_iconn a i:hover{
+    color: #6715e1;
+    transform: rotate(360deg);
+}
+
+/* *******************************************************/
+/* Team Section Start Here (Design) */
+.team{
+    width: 100%;
+    border: 0.7px solid gray;
+    padding: 30px;
+}
+.team h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    color: var(--logo-color);
+}
+.team_text{
+    opacity: 0.8;
+    padding: 20px;
+    text-align: justify;
+    width: 60%;
+    margin: auto;
+    color: var(--secondary-color);
+}
+.team_section{
+    width: 100%;
+    display: flex;
+    padding: 20px 0px;
+}
+.team_left{
+    display: flex;
+    background-color: var(--team-color);
+    margin: 0px 15px;
+    box-shadow: 1px 1px 10px rgb(170, 164, 164);
+}
+.team img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.team_details h1{
+    padding: 15px 0px 5px 20px;
+    color: var(--secondary-color);
+}
+.team_details p{
+    padding: 3px 0px 0px 18px;
+   color: var(--secondary-color);
+}
+.team_details .details{
+    opacity: 0.6;
+    /* color: rgb(92, 92, 92); */
+    color: var(--secondary-color);
+    margin-left: 10px ;
+   
+}
+    /* Contact Link Here */
+.link{
+    padding-bottom: 25px;
+    text-align: center;
+}
+.link a{
+    text-decoration: none;
+    padding: 10px;
+}
+.link a i{
+    font-size: 1.4rem;
+    color: blueviolet;
+    transition: 0.8s all ease;
+
+}
+.link a i:hover{
+    color: #6600ff;
+    font-size: 2rem;
+    transform: rotate(360deg);
+}
+
+/* For Right Div (VISHAL) */
+.team_right{
+    display: flex;
+    margin: 0px 15px;
+    background-color: var(--team-color);
+    box-shadow: 1px 1px 10px rgb(170, 164, 164);
+}
+.team img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* ************************************************************************** */
+/* Contact Us Section Start Here  */
+.contact-us{
+    margin: 30px 0px; 
+    box-shadow: 0px 0px 1px gray;
+    width: 100%;
+    height: 600px;
+}
+.contact-us h1{
+    text-align: center;
+    padding: 30px 0px 30px 0px;
+    color: var(--logo-color);
+}
+.contact-link{
+
+    display: flex;
+    justify-content: space-evenly;
+}
+/* For Contact Links  */
+.contact-left-div{
+    width: 46%;
+    height: 450px;
+    display: grid;
+    place-content: center;
+}
+.contact-left-div h3{
+    text-align: center;
+    font-size: 2.4rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+.contact-left-div h2{
+    text-align: center;
+    font-size: 3rem;
+    color: var(--logo-color);
+}
+.contact_text{
+    width: 70%; 
+    margin: auto;
+    padding: 17px;
+}
+.contact_text h4{
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+}
+.contact_text hr{
+    border-bottom-color: green;
+    margin: 5px;
+}
+.contact_text p{
+    font-size: 1.2rem;
+    padding: 12px;
+    text-align: justify;
+    color: var(--secondary-color);
+}
+.iconn{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.iconn a{
+    text-decoration: none;
+}
+.iconn a i{
+    padding: 10px 15px;
+    font-size: 2.4rem;
+    color: var(--logo-color);
+    transition: 0.5s all ease;
+
+}
+.iconn a i:hover{
+    transform: rotate(360deg);
+    color: #6f0ddf;
+    
+}
+
+
+/* For Contact Form  */
+.contact-right-div{
+    width: 46%;
+    height: 450px;
+    display: grid;
+    place-content: center;
+}
+.form{
+    background-color: #4e96bd;
+    padding: 8px 25px 10px 5px;
+    border-radius: 50px 0px;
+    
+}
+.form input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40px;
+    margin: 10px;
+    padding:  2px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #edf2fc;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.form textarea{
+    margin: 10px;
+    padding: 2px 10px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    background-color: #edf2fc;
+    font-size: 18px;
+}
+.form input, textarea:focus{
+    outline-color: rgb(140, 254, 190);
+}
+.form input::placeholder{
+    font-size: 18px;
+}
+.form textarea{
+    font-size: 18px;
+}
+.form textarea::placeholder{
+    font-size: 18px;
+}
+.form input[type="submit"]{
+    cursor: pointer;
+    background-color: var(--logo-color);
+    font-size: 18px;
+    width: 150px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: 0.4s all ease;
+    border: 5px;
+    color: white;
+}
+.form input[type="submit"]:hover{
+    background-color: #6b54ec;
+    color: var(--secondary-color);
+}
+
+/* ********************************************************************* */
+/* For Footer Hr  */
+.foot-hr{
+    border-bottom-width: 1px;
+    border-bottom-color: var(--logo-color);
+    margin: 50px 20px 0px 20px;
+    border-radius: 15px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+.cmp-nam h2{
+    color: var(--logo-color);
+    font-size: 22px;
+}
+.licence{
+    color: var(--secondary-color);
+}
+.contact{
+    cursor: pointer;
+}
+.contact a{
+    text-decoration: none;
+}
+.contact a i{
+    padding: 0px 5px;
+    color: var(--logo-color);
+    transition: 0.4s ease;
+    font-size: 20px;
+    transition: 0.5s all ease;
+}
+.contact a i:hover{
+    color: #490ca4;
+    transform: rotate(360deg);
+    
+}
+
+
+
+
+
+/* ********************************************************** */
+
+/* Media Queries For Make Website Responsive */
+@media screen and (min-width: 701px) {
+    nav ul li {
+        padding: 5px;
+        font-size: 15px;
+    }
+    .card2 .hm-img{
+        height: 50vh;
+    }
+   
+}
+
+@media screen and (max-width: 460px){
+    .service-cards{
+        margin: 75px;
+    }
+    .aboutus-text{
+        /* width: 100%; */
+        margin-right: 10px;
+        text-align: justify;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    span {
+        display: block;
+    }
+
+    nav {
+        height: 0px;
+        position: absolute;
+        top: 77px;
+        width: 100vw;
+        background-color: var(--primary-color);
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+        margin: 30px 0px 0px 0px;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .nav.active {
+        height: 450px;
+    }
+
+    .nav.active ul {
+        opacity: 1;
+    }
+    .cards{
+        flex-direction:column-reverse;
+    }
+    .card1{
+        width: 100%;
+    }
+    .register{
+        padding: 8px 50px;
+    }
+    .card2 .hm-img{
+        height: 40vh;
+        padding: 0px 10px;
+    }
+    .foot-hr{
+        margin-top: 6px;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .service-cards{
+        display: flex;
+        flex-direction: column;
+        margin: 10px 120px;
+        width: 100%;
+        gap: 20px;
+    }
+    .contact-left-div h3{
+        font-size: 20px;
+    }
+    .contact-left-div h2{
+        font-size: 24px;
+    }
+    .iconn a i{
+        font-size: 20px;
+    }
+    .team_section{
+        gap: 20px;
+        flex-direction: column;
+    }
+    .team_text{
+        width: 100%;
+        text-align: justify;
+    }
+    
+}

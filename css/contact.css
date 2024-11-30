@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #edf2fc;
+    --secondary-color: #070707;
+    --logo-color: #8b3dff;
+}
+
+.dark-theme {
+    --primary-color: #1c1c1e;
+    --secondary-color: #fff;
+    --logo-color: #9e77f3;
+
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+
+    /* For Header Section  */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        text-transform: uppercase;
+        padding: 20px;
+        color: var(--logo-color);
+    }
+    
+    nav ul {
+        display: flex;
+    }
+    
+    nav ul li {
+        list-style: none;
+        text-transform: uppercase;
+        padding: 20px 30px;
+    }
+    
+    nav ul li a {
+        color: var(--secondary-color);
+        text-decoration: none;
+        transition: 0.4s;
+        padding: 5px 15px;
+        border-radius: 60px;
+        font-size: 16px;
+    }
+    
+    nav ul li a:hover { 
+        color: blueviolet;
+    }
+    
+    nav ul li a.active {
+        font-size: 17px;
+    }
+    .active img{
+        color: var(--logo-color);
+    }
+    
+        /* For Moon/Sun Icon  */
+    .icon{
+        color: black;
+        width: 1.6rem;
+        height: 1.6rem;
+        background-color: var(--primary-color);
+    }
+    
+    .icon:hover {
+        background-color: var(--primary-color); 
+    }
+    
+        /*For  Hamburger Menu */
+    span{
+        font-size: 25px;
+        margin: 0px 20px;
+        display: none;
+        cursor: pointer;
+        color: var(--logo-color);
+    }
+    
+        /* For Horizontal Line  */
+    .nav-hr{
+        border-bottom-width: 3px;
+        border-bottom-color: var(--logo-color);
+        margin: 0px 20px;
+        border-radius: 15px;
+    }

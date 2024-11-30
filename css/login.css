@@ -1,0 +1,85 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body
+{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #161625;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(../image/back.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Main Container Start */
+#container
+{
+    height: auto;
+    width: 500px;
+    position: relative;
+    padding: 30px;
+    border-radius: 2px  50px;
+    background-color: #edf2fc;
+}
+#container h2
+{
+    font-size: 3rem;
+    margin: 5px 0 10px 0px;
+    color: #8b3dff;
+    text-align: center;
+}
+
+/* For Error Message Display  */
+#container #errors
+{
+    font-size: 18px;
+    display: none;
+}
+
+/* Input Field Design Here  */
+#container input
+{
+    height: 50px;
+    width: 100%;
+    border: none;
+    margin: 8px 0;
+    padding: 0px 20px;
+    font-size: 18px;
+    background-color: rgb(234, 233, 233);
+    border-radius: 7px;
+}
+
+#container input:focus{
+    outline-color: #44f490;
+}
+#container input[type="submit"]
+{
+    background-color: #9e77f3;
+    color: #fff;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s all ease;
+}
+#container input[type="submit"]:hover{
+    color: #000;
+    background-color: #7844e7;
+}
+#container p
+{
+    font-size: 19px;
+    margin: 17px;
+    color: #000;
+}
+#container p a
+{
+    text-decoration: none;
+    font-size: 19px;
+    color: blue;
+}
